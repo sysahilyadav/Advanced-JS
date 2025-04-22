@@ -54,7 +54,7 @@
 // functions on a class is called methods  ., in case of methods wwe need not to use the function key word 
 
 // class Person{
-//         constructor(firstName,lastName){
+//         constructor(firstName,lastName="sahil"){
 //             this.firstName=firstName;
 //             this.lastName=lastName;
     
@@ -64,6 +64,116 @@
             
 //         }
 //     }
-//     let p=new Person("jitendra"," ","chauhan");
-//     p.greet();
+   
+    // let p=new Person("jitendra","chauhan");
+    // p.greet();
+    // console.log("firstname: ",p.firstName ," ","lastname: ",p.lastName);
     
+
+    // let p=new Person("jitendra");
+    // p.greet();
+    // console.log("firstname: ",p.firstName ," ","lastname: ",p.lastName);
+    
+    
+// default arguments should be the trailing argument 
+
+// let p=new Person1("jitendra");
+// p.greet();
+// console.log("firstname: ",p.firstName ," ","lastname: ",p.lastName);
+
+
+// methods***********************
+// class Person{
+//     constructor(firstName,lastName="singh"){
+//         this.firstName=firstName;
+//         this.lastName=lastName;
+
+//     }
+//     greet(){
+//         console.log("good morning ",this.firstName);
+        
+//     }
+//     complement(name,object){
+//         return "this is a wonderfull " +object +" "+ name;
+
+//     }
+// }
+
+// let p=new Person("jitendra","chauhan");
+
+// let complement =p.complement("harry","potter");
+// console.log(complement);
+
+// // holding the greet function in a variable 
+// let greetResult=p.greet(); // greetResult will hold undefined as greet method is not returning anything from the method
+// console.log(greetResult);
+
+
+// setting the attribute value to private ******************
+
+
+//   class Person{
+//     #firstName;
+//     #lastName;
+//     constructor(firstName,lastName="singh"){
+//         this.#firstName=firstName;
+//         this.#lastName=lastName;
+
+//     }
+   
+// }
+
+// let p=new Person("jitendra","chauhan");
+// console.log(p.firstName); // output is undefinned 
+
+
+
+//validation  ///************************
+
+// class Person{
+
+//     #firstName;
+//     #lastName;
+//         constructor(firstName,lastName="singh"){
+//             if(this.#firstName.startswith("M")){
+//             this.#firstName=firstName;
+//             this.#lastName=lastName;
+    
+//         }
+// }}
+
+
+// attribute is set to private and methods is set to public 
+// class Person{
+
+//     #firstName;
+//     #lastName;
+//         constructor(firstName,lastName="singh"){
+//             this.#firstName=firstName;
+//             this.#lastName=lastName;
+    
+//         }
+//     get firstName(){
+//         return this.#firstName;
+
+//     }
+//     set firstName(firstName){
+//         this.#firstName=firstName;
+
+//     }
+//     get lastName(){
+//         return this.#lastName;
+//     }
+//     set lastName(lastName){
+//         this.#lastName=lastName;
+
+//     }
+
+
+
+// }
+
+// let p=new Person("jitendra","chauhan");
+// p.firstName="sahil";
+// p.lastName="yadav";
+// console.log(p.firstName()," ",p.lastName());
