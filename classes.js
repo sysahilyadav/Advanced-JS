@@ -177,3 +177,60 @@
 // p.firstName="sahil";
 // p.lastName="yadav";
 // console.log(p.firstName()," ",p.lastName());
+
+
+//Inheritence
+///It is a concept that  classes can have child classes that inherits the properties and methods from the parent class.
+
+class vehicle{
+    constructor(color,currentspeed,maxspeed){
+        this.color=color;
+        this.currentspeed=currentspeed;
+        this.maxspeed=maxspeed;
+    }
+    move(){
+        console.log("Moving at",this.currentspeed);
+    }
+    accelerate(amount){
+        this.currentspeed+=amount;
+    }
+}
+
+class motorcycle extends vehicle{
+    constructor(color,currentspeed,maxspeed,fuel){
+        super(color,currentspeed,maxspeed);//parent class constructor called
+        this.fuel=fuel;
+    }
+    doWheelie(){
+        console.log("Driving on one wheel");
+    }
+}
+
+let motor = new motorcycle("Black",0,250,"gasoline");
+console.log(motor.color);
+console.log(motor.move(50));
+
+/*****************prototypes ************************** */
+// Prototypes
+// A prototyope is the mechanism in js that makes it possible to have object
+class person{
+    constructor(firstname,lastname="Maurya"){
+        this.firstname=firstname;
+        this.lastname=lastname;
+    }
+    greet(){
+        console.log("Hi there! I'm",this.firstname,this.lastname);
+        
+    }
+    // compliment(name,object){
+    //     return "That's a wonderful "+object+","+ name;
+    // }
+}
+
+person.prototype.introduce=()=>{
+    console.log("Hi! I am ",this.firstname);
+}
+person.prototype.favoritecolor="green";
+let p=new person("Priyanshu");
+console.log(p.favoritecolor);
+p.introduce();
